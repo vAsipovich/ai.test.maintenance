@@ -10,7 +10,7 @@ export class MainPage {
   constructor(page: Page) {
     this.page = page;
     this.nav = page.getByRole('navigation', { name: 'Main' });
-    this.docsLink = this.nav.getByRole('link', { name: 'Docs' });
+    this.docsLink = page.locator("css=#docs");
     this.apiLink = this.nav.getByRole('link', { name: 'API' });
     this.communityLink = this.nav.getByRole('link', { name: 'Community' });
   }
